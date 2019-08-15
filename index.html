@@ -334,95 +334,26 @@
       
         
           
-            <h1 id="Vim学习-–-基本配置篇"><a href="#Vim学习-–-基本配置篇" class="headerlink" title="Vim学习 – 基本配置篇"></a>Vim学习 – 基本配置篇</h1><h2 id="一、基本配置"><a href="#一、基本配置" class="headerlink" title="一、基本配置"></a>一、基本配置</h2><ol>
-<li><p>开启语法高亮</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">syntax on</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置打开文件编码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set encoding=utf8</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置配色模板</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let g:solarized_termcolors=256</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置配色方案</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">" colorscheme solarized</span><br><span class="line">" colorscheme desert</span><br><span class="line">  colorscheme molokai</span><br><span class="line">" colorscheme jellybeans</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>识别文件编码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set fileencodings=ucs-bom,utf-8,latin1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>总是在Vim窗口的右下角显示当前光标的行列信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set ruler</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在Vim窗口的右下角显示一个完整的命令已经完成的部分</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set showcmd</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>智能缩进</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set smartindent</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>这是tab空白长度</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set shiftwidth=4</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>高亮显示匹配的括号</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set showmatch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置背景色</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set background=dark</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>定义tab所等同的空格长度</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set tabstop=4</span><br><span class="line">set expandtab</span><br><span class="line">set hlsearch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在键入目标字符串的过程中就同时开始搜索</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set incsearch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置折叠方式</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set foldmethod=marker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>帮助系统设置为中文</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set helplang=cn</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>文件在Vim之外修改过，自动重新读入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set autoread</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>搜索是不区分大小写</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set ignorecase</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>正则</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set magic</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不备份文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> set backup</span><br><span class="line"> set backupdir=~/vimbackup</span><br><span class="line">cset nowb</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不使用swp文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set noswapfile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在breakat字符处而不是最后一个字符处断行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set lbr</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>自动缩进</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set ai</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>禁用自动补全在上方所弹出的那个窗口</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set completeopt-=preview</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>当自动补全完成时, 自动关闭上面的窗口</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif</span><br><span class="line">"autocmd InsertLeave * if pumvisible() == 0|pclose|endif</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>搜索用grep</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set grepprg=/bin/grep\ -nH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>支持256色</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set t_Co=256</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>高亮色</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">highlight Search guifg=wheat guibg=peru ctermfg=223 ctermbg=172</span><br><span class="line">highlight IncSearch guifg=wheat guibg=peru ctermfg=223 ctermbg=172</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>高亮菜单</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">highlight Pmenu ctermfg=Black ctermbg=Grey</span><br><span class="line">highlight PmenuSel ctermfg=LightBlue ctermbg=DarkBlue</span><br></pre></td></tr></table></figure>
+          Vim学习 – 基本配置篇一、基本配置
+开启语法高亮
+1syntax on
 
-</li>
-</ol>
+设置打开文件编码
+1set encoding=utf8
 
-          
+设置配色模板
+1let g:solarized_termcolors=256
+
+设置配色方案
+1234" colorscheme solarized" colors
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/15/vim常用配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -550,21 +481,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/15/Myblogs/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
